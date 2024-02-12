@@ -40,8 +40,8 @@ function App(): JSX.Element {
                     <Col>
                         {" "}
                         <div>
-                            style = width: 20px; length: 10px; backgroundColor:
-                            #e61e3f;
+                            This is{" "}
+                            <span style={{ color: "red" }}>colored text</span>.
                         </div>
                     </Col>
                     <Col>
