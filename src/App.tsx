@@ -11,7 +11,7 @@ function App(): JSX.Element {
             </header>
             <h2>Second header for Task 3!</h2>
             <img
-                src={"./picture for task3.jpeg"}
+                src={"/Users/jjmuhumuza/tasks/src/picture for task3.jpeg"}
                 alt="A picture of the moon!"
             />
             <Button onClick={() => console.log("Hello World!")}>
@@ -40,13 +40,15 @@ function App(): JSX.Element {
                     <Col>
                         {" "}
                         <div>
-                            width: 20px; length: 10px; backgroundColor: #e61e3f;
+                            style = width: 20px; length: 10px; backgroundColor:
+                            #e61e3f;
                         </div>
                     </Col>
                     <Col>
                         {" "}
                         <div>
-                            width: 20px; length: 10px; backgroundColor: #e61e3f;
+                            style =width: 20px; length: 10px; backgroundColor:
+                            #e61e3f;
                         </div>
                     </Col>
                 </Row>
