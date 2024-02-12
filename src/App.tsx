@@ -11,7 +11,7 @@ function App(): JSX.Element {
             </header>
             <h2>Second header for Task 3!</h2>
             <img
-                src={"/Users/jjmuhumuza/tasks/src/picture for task3.jpeg"}
+                src="/Users/jjmuhumuza/tasks/src/picture for task3.jpeg"
                 alt="A picture of the moon!"
             />
             <Button onClick={() => console.log("Hello World!")}>
@@ -32,7 +32,7 @@ function App(): JSX.Element {
                 </li>
                 <li>
                     {" "}
-                    <p> Third Element of list</p>
+                    <p>Third Elements of list</p>
                 </li>
             </ul>
             <Container>
@@ -41,7 +41,7 @@ function App(): JSX.Element {
                         {" "}
                         <div>
                             This is{" "}
-                            <span style={{ color: "red" }}>colored text</span>.
+                            <span style={{ color: "blue" }}>colored text</span>.
                         </div>
                     </Col>
                     <Col>
