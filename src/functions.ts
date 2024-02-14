@@ -30,7 +30,7 @@ export function add3(first: number, second: number, third: number): number {
  * mark added to the end.
  */
 export function shout(message: string): string {
-    const newWord: string = message.toUpperCase + "!";
+    const newWord: string = message.toUpperCase() + "!";
     return newWord;
 }
 
@@ -39,7 +39,7 @@ export function shout(message: string): string {
  * mark. Do not use an `if` statement in solving this question.
  */
 export function isQuestion(message: string): boolean {
-    return message[-1] === "?";
+    return message[message.length - 1] === "?";
 }
 
 /**
