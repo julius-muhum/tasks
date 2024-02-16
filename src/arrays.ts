@@ -6,9 +6,10 @@
  */
 export function bookEndList(numbers: number[]): number[] {
     const newNumbers: number[] = [];
-    if (!numbers) {
-        return newNumbers;
+    if (numbers.length === 0) {
+        return [];
     }
+    //newNumbers = [];
     if (numbers.length === 1) {
         newNumbers.push(numbers[0]);
         newNumbers.push(numbers[0]);
@@ -93,16 +94,16 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    if (!colors) {
+    if (colors.length === 0) {
         return true;
     }
     colors = colors.filter(
         (color: string): boolean =>
-            color.toUpperCase() != "RED" &&
-            color.toUpperCase() != "BLUE" &&
-            color.toUpperCase() != "GREEN"
+            color.toUpperCase() !== "RED" &&
+            color.toUpperCase() !== "BLUE" &&
+            color.toUpperCase() !== "GREEN"
     );
-    if (colors) {
+    if (colors.length > 0) {
         return false;
     }
     return true;
@@ -116,7 +117,7 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    if (!addends) {
+    if (addends.length === 0) {
         return "0=0";
     }
     const sum: number = addends.reduce(
@@ -131,7 +132,6 @@ export function makeMath(addends: number[]): string {
         ""
     );
     complete = sum.toString() + "=" + complete;
-
     return complete.substring(0, complete.length - 1);
 }
 
@@ -145,5 +145,21 @@ export function makeMath(addends: number[]): string {
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
 export function injectPositive(values: number[]): number[] {
-    return [];
+    let total = 0;
+    let truth = false;
+    let index = 0;
+    let final = 0;
+    let count = 0;
+    const numbers: number[] = values.map((num) =>
+        num < 0 && !truth
+            ? ((truth = true), (index = count), (final = total), num)
+            : ((total += num), count++, num)
+    );
+    if (!truth) {
+        numbers.push(total);
+        return numbers;
+    }
+    numbers.splice(index + 1, 0, final);
+    return numbers;
 }
+console.log(injectPositive([-100, 0, -200, 100, 200]));
