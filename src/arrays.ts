@@ -1,3 +1,4 @@
+/* eslint-disable no-extra-parens */
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -84,6 +85,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
 export function countShortWords(words: string[]): number {
     let shorts: string[] = [];
     shorts = words.filter((short: string): boolean => short.length < 4);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const sum = shorts.reduce((sum: number, short: string) => sum + 1, 0);
     return sum;
 }
@@ -151,6 +153,7 @@ export function injectPositive(values: number[]): number[] {
     let final = 0;
     let count = 0;
     const numbers: number[] = values.map((num) =>
+        // eslint-disable-next-line prettier/prettier, no-extra-parens
         num < 0 && !truth
             ? ((truth = true), (index = count), (final = total), num)
             : ((total += num), count++, num)
