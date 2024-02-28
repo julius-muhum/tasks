@@ -1,15 +1,14 @@
 import React from "react";
 import "./App.css";
-<<<<<<< HEAD
+//HEAD;
 import { Button, Col, Container, Row } from "react-bootstrap";
-=======
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
->>>>>>> upstream/task-state
+//upstream/task-state
 
 function App(): JSX.Element {
     return (
@@ -18,7 +17,6 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript. By Julius Muhumuza.
                 Hello World!
             </header>
-<<<<<<< HEAD
             <h2>Second header for Task 3!</h2>
             <img
                 src={require("./picture for task3.jpeg")}
@@ -75,7 +73,6 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-=======
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -88,7 +85,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-state
         </div>
     );
 }
