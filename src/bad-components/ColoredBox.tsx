@@ -20,8 +20,7 @@ function ChangeColor({
 }
 
 function ColorPreview({
-    colorIndex,
-    setColorIndex
+    colorIndex
 }: {
     colorIndex: number;
     setColorIndex: (colorIndex: number) => void;
