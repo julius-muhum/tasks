@@ -153,7 +153,6 @@ export function injectPositive(values: number[]): number[] {
     let final = 0;
     let count = 0;
     const numbers: number[] = values.map((num) =>
-        // eslint-disable-next-line prettier/prettier, no-extra-parens
         num < 0 && !truth
             ? ((truth = true), (index = count), (final = total), num)
             : ((total += num), count++, num)
